@@ -1,0 +1,27 @@
+<table class="activity-list table table-striped">
+  <% for activity in activities %>
+    <tr id="<%= "activity_#{activity.id}" %>">
+      <td class="col-sm-3">
+        <%= image_tag(activity.cover.thumb.url) %>
+      </td>
+      <td class="col-sm-8">
+        <div class="name">
+          <%= link_to activity.name , activity_path(activity) %> <br />
+        </div>
+        <div class="time">
+          <%= Activity.human_attribute_name(:start_time) + ": " %>
+          <%= activity.start_time %> <br />
+        </div>
+        <div class="time">
+          <%= Activity.human_attribute_name(:end_time) + ": " %>
+          <%= activity.end_time %>
+        </div>
+      </td>
+      <td class="col-sm-1">
+        <div class="actions">
+          <%= favorite_activity_tag activity %>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+</table>

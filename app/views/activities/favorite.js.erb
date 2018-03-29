@@ -1,0 +1,5 @@
+<% if @isfavorite %>
+    $('#activity_<%= @activity.id %>   a[favorite] > i').attr("class","fa fa-heart")
+<% else %>
+    $('#activity_<%= @activity.id %>   a[favorite] > i').attr("class","fa fa-heart-o")
+<% end %>

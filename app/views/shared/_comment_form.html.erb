@@ -1,0 +1,11 @@
+<div class="create_comment">
+  <%= form_tag("/#{model.class.to_s.downcase.pluralize}/#{model.id}/create_comment", remote: true) do |f| %>
+
+    <div class="form-group" id="content">
+      <%= label_tag :content, Comment.human_attribute_name(:comment) %>
+      <%= text_area_tag :content, nil, class:"form-control" , "data-provide" => "markdown" , "rows" => "10" %>
+    </div>
+
+    <%= submit_tag t(:create_comment),:class=>"btn btn-primary", :disable_with => 'Submiting...' %>
+  <% end %>
+</div>

@@ -1,0 +1,38 @@
+<% for bike in bikes %>
+    <div class="col-sm-3">
+        <div class="bike-item" id=<%= "bike_#{bike.id}" %>>
+           <a href=<%= bike_url(bike) %> class="bike-link" data-toggle="modal">
+              <div class="caption">
+                 <div class="caption-content">
+                     <i class="fa fa-search-plus fa-3x"></i>
+                 </div>
+             </div>
+             <%= image_tag(bike.avatars[0].thumb.url , class: "img-responsive") %>
+           </a> 
+           <div class="bike-inform">
+             <div id="name">
+                 <b><%= bike.name %></b>   
+             </div>        
+             <div id="brand" class="item">
+               <span class="prefix-title"> <%= Bike.human_attribute_name(:brand) + ": " %> </span>
+               <%= bike.brand %>
+             </div>
+             <div id="model" class="item">
+               <span class="prefix-title"> <%= Bike.human_attribute_name(:model) + ": " %> </span>
+               <%= bike.model %>
+             </div>
+             <div id="price" class="item">
+               <span class="prefix-title">  <%= Bike.human_attribute_name(:price) + ": " %> </span>   
+               <%= bike.price %>
+             </div>
+             <div id="market_time" class="item">
+               <span class="prefix-title"> <%= Bike.human_attribute_name(:market_time) + ": " %> </span>
+               <%= bike.market_time %>
+             </div>
+           </div>
+           <div class="function-buttons">
+               <%= favorite_bike_tag bike %>
+           </div>
+       </div>
+   </div> 
+<% end %> 

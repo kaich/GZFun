@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dingtubike</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap-markdown', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render "shared/navigation" %>
+
+  <!--error message -->
+  <section>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= alert_type(message_type) %>">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+
+  <% if controller_path.include? "devise" %>
+    <section>
+      <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
+  <% else %>
+    <%= yield %>
+  <% end %>
+
+</body>
+</html>

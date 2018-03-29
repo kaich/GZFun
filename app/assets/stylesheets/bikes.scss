@@ -1,0 +1,109 @@
+// Place all the styles related to the Bikes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variable";
+@import "mixins";
+
+
+
+
+#bike {
+
+    .bike-item {
+        position: relative;
+        height: 380px;
+        background-color: #eee;
+        border-radius: 3px;
+        margin: 0 0 15px;
+        right: 0;
+        .bike-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .caption {
+                background: fade($theme-success, 90%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .caption-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .bike-inform {
+          margin-left: 5px;
+          margin-right: 5px;
+          #name {
+             margin-top: 10px;
+             margin-bottom: 10px;
+             text-align: center; 
+             font-size: 16px;
+          }
+          .item {
+            margin-top: 5px;
+            .prefix-title {
+              color: #666;
+            }
+          }
+        }
+        .function-buttons {
+          margin-left: 5px;
+          margin-right: 5px;
+          position: absolute;
+          bottom: 10px;
+        }
+    }
+    * {
+        z-index: 2;
+    }
+}
+
+.tool-bar {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+}
+
+.detail-bike {
+  text-align: center;
+  .item-details {
+    display: inline-block;
+  }
+  #bike-price {
+    color: $theme-success;
+    @include prefix_fa_icon("\f0d6"); 
+  }
+  .bottom-bar {
+    .actions {
+      .item {
+        a {
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

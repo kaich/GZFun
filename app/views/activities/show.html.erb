@@ -1,0 +1,59 @@
+<section class="detail-activity">
+  <div class="container">
+    <div class="col-lg-12">
+      <!--cover header-->
+      <div class="page-header">
+        <%= image_tag(@activity.cover.url , width:"100%") %> 
+      </div>  
+      <!-- information panel-->
+      <div class="activity-content">
+        <div class="activity-title">
+          <h4><%= @activity.name %></h4>
+        </div>
+        <div class="activity-body">
+          <div class="activity-time">
+            <div class="start-time col-sm-6">
+              <%= t Activity.human_attribute_name(:start_time) %>: <%= @activity.start_time %>  
+            </div>
+            <div class="end-time col-sm-6">
+              <%= t Activity.human_attribute_name(:end_time) %>: <%= @activity.end_time %>  
+            </div>
+          </div>
+          <hr class="bike-primary"/>
+          <div class="activity-intro">
+            <h4 class="rule"><%= t Activity.human_attribute_name(:rule) %>:</h5>
+            <p><%= render_markdown @activity.rule %></p>
+            <h4 class="information"><%= t Activity.human_attribute_name(:information) %>:</h5>
+            <p><%= render_markdown @activity.information %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if admin? %>
+      <!-- action panel -->
+      <div class="col-lg-12">
+        <div class="bottom-bar">
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <div class="actions">
+                <div class="item">
+                  <%= link_to t(:edit) , edit_activity_path(@activity), class:"btn btn-warning col-sm-8 col-sm-offset-2" %>
+                </div> 
+                <div class="item">
+                  <%= link_to t(:destroy) , activity_path(@activity), method: :delete ,class:"btn btn-danger col-sm-8 col-sm-offset-2" %>
+                </div> 
+             </div>
+           </div>
+         </div> 
+        </div>
+      </div>
+    <% end %>
+    <!-- comment -->
+    <div id="comment_box">
+      <% for comment in @comments %>
+       <%= render "shared/comment", comment: comment %> 
+      <% end %>
+    </div>
+    <%= render "shared/comment_form", model: @activity %>
+  </div>
+</section>

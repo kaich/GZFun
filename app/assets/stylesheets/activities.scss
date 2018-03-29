@@ -1,0 +1,72 @@
+// Place all the styles related to the activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variable";
+@import "mixins";
+
+.activity-content {
+  padding: 20px;
+  .activity-title {
+    text-align: center;
+  }
+  .activity-body {
+    margin-top: 50px;
+    .activity-time {
+      height: 50px;
+      .start-time,
+      .end-time {
+        text-align: center;
+        color: #333;
+      }
+    }
+    .activity-intro {
+      margin-top: 50px;
+      .rule {
+        margin: 50px 0 30px 0;
+        color: $theme-success
+      }
+      .information {
+        margin: 50px 0 30px 0;
+        color: $theme-success
+      }
+    }
+  }
+}
+
+
+.start-time {
+  @include prefix_fa_icon("\f274"); 
+}
+
+.end-time {
+  @include prefix_fa_icon("\f273"); 
+}
+
+.activity-list {
+  .name {
+    position: relative;
+    top: -4px;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .time {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #666;
+  }
+  .actions {
+  }
+}
+
+
+.detail-activity {
+  .actions {
+    .item {
+      a{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
