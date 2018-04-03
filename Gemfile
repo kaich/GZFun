@@ -85,7 +85,8 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano-passenger'
+  gem 'capistrano-rails-console' 
+  gem 'capistrano3-puma', require: false 
   # Add this if you're using rvm
   # gem 'capistrano-rvm'
 end
