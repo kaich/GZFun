@@ -38,31 +38,28 @@ set :deploy_to, "/var/www/GZFun"
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-#puma
-set :rbenv_ruby, "#{File.read('.ruby-version').chomp}"
-set :rbenv_type, :user
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
-set :puma_worker_timeout, 60
-set :puma_init_active_record, true
-set :puma_preload_app, true
 
-# Stage specific (stagename.rb)
-set :rails_env, 'staging'
-set :puma_env, 'staging'
-
-# Configure depending on server load
-set :puma_threads, [0, 5]
-set :puma_workers, 1
 
 namespace :deploy do
 
-    after :restart, :clear_cache do
-      on roles(:web), in: :groups, limit: 3, wait: 10 do
-        # Here we can do anything such as:
-        # within release_path do
-        #   execute :rake, 'cache:clear'
-        # end
-      end
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
     end
-  
+    invoke 'puma:restart'
+  end
+
+  after :publishing, :restart
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
 end
