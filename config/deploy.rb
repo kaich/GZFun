@@ -4,6 +4,8 @@ lock "~> 3.10.1"
 set :application, "GZFun"
 set :repo_url, "git@github.com:kaich/GZFun.git"
 
+set :tmp_dir, "/home/deployer/tmp"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
