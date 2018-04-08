@@ -2,11 +2,10 @@ zh:
   #Main
   welcome:
     index:
-      bike: "自行车"
-      activity: "活动"
-      about: "关于"
-      location: "地址"
-      signature: "格言"
+      activity: "微论坛"
+      download: "下载"
+      features: "特征"
+      contact: "联系"
   will_paginate:
     previous_label: "上一页"
     next_label: "下一页"

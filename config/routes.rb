@@ -9,4 +9,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :activities do 
+    member do
+      patch :favorite
+      post :create_comment
+    end
+  end
+
 end
