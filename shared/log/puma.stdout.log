@@ -332,3 +332,38 @@ Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.1ms)
 === puma shutdown: 2018-04-10 11:00:28 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-10 11:13:47 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-10 11:19:52 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-10 11:39:12 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-10 11:39:51 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (361.8ms)
+  Rendered shared/_navigation.html.erb (8.8ms)
+Completed 200 OK in 454ms (Views: 446.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-10 11:40:00 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.9ms)
+  Rendered activities/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 0.1ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-10 14:15:58 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-10 14:52:12 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-10 16:31:38 +0800 ===
+- Goodbye!
+Exiting
