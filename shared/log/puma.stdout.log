@@ -805,3 +805,54 @@ Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
 === puma shutdown: 2018-04-11 17:06:23 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-11 17:07:13 +0800 ===
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-11 17:07:14 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (16.6ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 577ms (Views: 536.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-11 17:56:57 +0800
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (12.5ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 2240ms (Views: 2217.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-11 19:09:10 +0800
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (140.5ms)
+  Rendered shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 3851ms (Views: 3725.5ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-11 19:25:56 +0800
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (83.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (30.6ms)
+  Rendered shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 540ms (Views: 416.0ms | ActiveRecord: 83.1ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-11 19:27:40 +0800
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1940ms (Views: 1937.5ms | ActiveRecord: 0.1ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-11 19:32:18 +0800 ===
+- Goodbye!
+Exiting

@@ -20,7 +20,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: image-url("bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  background: image-url("bg-pattern.png"), linear-gradient(to left, #f0f0f0, #ffffff);
 }
 body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
@@ -59,7 +59,8 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.navbar-default {
+/*采用welcome里面的导航样式*/
+/* .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
   -webkit-transition: all 0.35s;
@@ -146,7 +147,7 @@ p {
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #fdcc52;
   }
-}
+} */
 header {
   position: relative;
   width: 100%;
