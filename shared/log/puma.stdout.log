@@ -436,3 +436,372 @@ app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_htm
 === puma shutdown: 2018-04-11 10:38:22 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-11 10:41:04 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-11 10:41:37 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (329.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (11.9ms)
+Completed 200 OK in 451ms (Views: 436.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 10:43:12 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 1846ms (Views: 1844.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 10:43:16 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 13:45:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 120ms (Views: 107.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-11 13:45:14 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-11 13:45:45 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"770tQ0YAZKCWhx4aiXTdWPbiCkPh/4tLeekyklHwCxuNgQ3Z91K61TTYeTd2WAbdTOxy7VGfIamN6Z0yv2ua/Q==", "user"=>{"email"=>"123456@qq.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"注册"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123456@qq.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "123456@qq.com"], ["encrypted_password", "$2a$11$OXQpFFSUJu0rR3hXGD3Vq.GjZVyzcUXNXiGf19DptQE9G7/guozky"], ["created_at", "2018-04-11 05:45:45.262729"], ["updated_at", "2018-04-11 05:45:45.262729"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-11 05:45:45.265391"], ["last_sign_in_at", "2018-04-11 05:45:45.265391"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-04-11 05:45:45.265762"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/
+Completed 302 Found in 139ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 13:45:45 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (3.7ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    43:                       <% end %>
+    44:                     <% else %>
+    45:                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    46:                         <%= image_tag(current_user.avatar.thumb.url) %>
+    47:                         <%= current_user.nick.blank? ? current_user.email : current_user.nick %>
+    48:                         <span class="caret"></span>
+    49:                       </a>
+  
+app/views/shared/_navigation.html.erb:46:in `_app_views_shared__navigation_html_erb__1181221742789276411_70118880445740'
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__2558996989458508504_70118870446520'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-11 15:41:12 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-11 15:41:19 +0800 ===
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 15:43:51 +0800
+Started GET "/" for 127.0.0.1 at 2018-04-11 15:43:51 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:9090/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 0.5ms)
+
+
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (2371.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (7.8ms)
+Completed 500 Internal Server Error in 2562ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `nick' for #<User:0x00007fcf9fd8d5a8>):
+    44:                     <% else %>
+    45:                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    46:                         <%= image_tag(current_user.avatar.thumb.url) if current_user.avatar? %>
+    47:                         <%= current_user.nick.blank? ? current_user.email : current_user.nick %>
+    48:                         <span class="caret"></span>
+    49:                       </a>
+    50:                       <ul class="dropdown-menu" role="menu" >
+  
+app/views/shared/_navigation.html.erb:47:in `_app_views_shared__navigation_html_erb___3016544347424980199_70264858430960'
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4145260255317152180_70264844148300'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-11 15:46:58 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-11 15:48:53 +0800 ===
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 15:57:57 +0800
+Started GET "/" for 127.0.0.1 at 2018-04-11 15:57:57 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.9ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 484ms (Views: 453.4ms | ActiveRecord: 0.6ms)
+
+
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 559ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:06:12 +0800
+Processing by WelcomeController#index as HTML
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 16:06:12 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 3473ms (Views: 3463.9ms | ActiveRecord: 0.1ms)
+
+
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 3511ms (Views: 3510.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-11 16:06:20 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-11 16:06:39 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"538RejrJRZuS22znML+uK09hSjO5ZPWxbzUw9M8rtfCFQzHgi5ub7jCEC8rPk3Wu9W8ynQkEX1ObNZ9UIbAkFg==", "user"=>{"email"=>"123456@qq.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"注册"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123456@qq.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "123456@qq.com"], ["encrypted_password", "$2a$11$WxbLlIvAzYDWIsjFDin8Z.xNDRmxh1K7GMkd6xYooM25KDaxCMx1."], ["created_at", "2018-04-11 08:06:39.715901"], ["updated_at", "2018-04-11 08:06:39.715901"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-11 08:06:39.718818"], ["last_sign_in_at", "2018-04-11 08:06:39.718818"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-04-11 08:06:39.719123"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/
+Completed 302 Found in 118ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:06:39 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (3.5ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:09:40 +0800
+Processing by WelcomeController#index as HTML
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 16:09:40 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+Redirected to http://127.0.0.1:9090/
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/mk/Documents/GZFun/app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/Users/mk/Documents/GZFun/app/views/layouts/application.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/application.html.erb:44: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:09:56 +0800
+Processing by WelcomeController#index as HTML
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 16:09:56 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+Redirected to http://127.0.0.1:9090/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:30:04 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:30:55 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:33:57 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 16:37:08 +0800
+Started GET "/" for 127.0.0.1 at 2018-04-11 16:37:08 +0800
+Processing by Devise::SessionsController#new as HTML
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:9090/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 1668ms (Views: 1666.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:37:13 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:51:53 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1760ms (Views: 1757.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:54:22 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1674ms (Views: 1672.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:54:51 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1659ms (Views: 1657.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:56:52 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 16:57:04 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2018-04-11 17:00:57 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (0.6ms)
+  Rendered activities/index.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-11 17:06:23 +0800 ===
+- Goodbye!
+Exiting

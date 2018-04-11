@@ -11,19 +11,16 @@
   <%= render "shared/navigation" %>
 
   <!--error message -->
-  <% if flash.keys.size > 0 %>
-    <section>
-      <div>
-        <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= alert_type(message_type) %>">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <%= message %>
-          </div>
-        <% end %>
-      </div>
-    </section>
-  <% end %>
-
+  <div>
+    <div class='alert-msg'>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= alert_type(message_type) %>">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
   <% if controller_path.include? "devise" %>
     <section>

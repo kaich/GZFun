@@ -20,6 +20,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background: image-url("bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
 }
 body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
