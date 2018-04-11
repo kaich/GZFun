@@ -367,3 +367,72 @@ Exiting
 === puma shutdown: 2018-04-10 16:31:38 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-11 09:09:00 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-11 10:29:31 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (549.3ms)
+  Rendered shared/_navigation.html.erb (14.5ms)
+Completed 200 OK in 705ms (Views: 695.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-11 10:29:34 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.3ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-11 10:30:23 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-11 10:31:00 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FyxQcLdgF3a/0fK9wFSAl7g75urLkGA+WOUZ6/dFJwV1EHDqBjLJAx2OlZA/eFsSAjWeRHvwytys5bZLGd624w==", "user"=>{"email"=>"chengkai1853@163.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"注册"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chengkai1853@163.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "chengkai1853@163.com"], ["encrypted_password", "$2a$11$HWUb0qB7bK8/O.JwOX1MGeJwfkJPbzvhAUZ5ZnEjHpnFc1v/wO1XC"], ["created_at", "2018-04-11 02:31:00.774106"], ["updated_at", "2018-04-11 02:31:00.774106"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-11 02:31:00.778337"], ["last_sign_in_at", "2018-04-11 02:31:00.778337"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-04-11 02:31:00.778588"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/
+Completed 302 Found in 121ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 10:31:00 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (7.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb' for #<AvatarUploader:0x00007f9656df5f90>):
+    43:                       <% end %>
+    44:                     <% else %>
+    45:                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    46:                         <%= image_tag(current_user.avatar.thumb.url) %>
+    47:                         <%= current_user.nick.blank? ? current_user.email : current_user.nick %>
+    48:                         <span class="caret"></span>
+    49:                       </a>
+  
+app/views/shared/_navigation.html.erb:46:in `_app_views_shared__navigation_html_erb__3321588518296158257_70141839713900'
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4084343306659917724_70141897237880'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-11 10:38:22 +0800 ===
+- Goodbye!
+Exiting
