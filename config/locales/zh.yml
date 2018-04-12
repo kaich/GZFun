@@ -6,6 +6,8 @@ zh:
       download: "下载"
       features: "特征"
       contact: "联系"
+      toggle_navigation: "点击导航栏"
+      menu: "菜单"
   will_paginate:
     previous_label: "上一页"
     next_label: "下一页"
