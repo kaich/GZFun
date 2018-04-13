@@ -1200,3 +1200,45 @@ Completed 200 OK in 1793ms (Views: 1791.2ms | ActiveRecord: 0.1ms)
 === puma shutdown: 2018-04-12 17:51:39 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-13 09:24:44 +0800 ===
+Started GET "/" for 192.168.0.58 at 2018-04-13 09:26:21 +0800
+Cannot render console from 192.168.0.58! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (2371.3ms)
+  Rendered shared/_navigation.html.erb (13.9ms)
+Completed 200 OK in 2533ms (Views: 2516.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.0.58 at 2018-04-13 09:37:27 +0800
+Cannot render console from 192.168.0.58! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 09:43:44 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 10:00:19 +0800 ===
+Started GET "/" for 192.168.0.58 at 2018-04-13 10:00:22 +0800
+Cannot render console from 192.168.0.58! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (480.3ms)
+  Rendered shared/_navigation.html.erb (9.0ms)
+Completed 200 OK in 629ms (Views: 615.9ms | ActiveRecord: 0.3ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 10:15:30 +0800 ===
+- Goodbye!
+Exiting

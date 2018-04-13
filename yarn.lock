@@ -249,6 +249,10 @@ html-encoding-sniffer@^1.0.1:
   dependencies:
     whatwg-encoding "^1.0.1"
 
+html5-device-mockups@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/html5-device-mockups/-/html5-device-mockups-3.2.1.tgz#97e39de69e9fa86760116653d8daf5fe43be77d5"
+
 http-signature@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/http-signature/-/http-signature-1.2.0.tgz#9aecd925114772f3d95b65a60abb8f7c18fbace1"
@@ -449,6 +453,10 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.1:
 sax@^1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+simple-line-icons@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/simple-line-icons/-/simple-line-icons-2.4.1.tgz#b75bc5a0d87e530928c2ccda5735274bb256f234"
 
 sntp@2.x.x:
   version "2.1.0"

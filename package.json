@@ -3,9 +3,11 @@
   "private": true,
   "dependencies": {
     "bootstrap-markdown": "^2.10.0",
+    "html5-device-mockups": "^3.2.1",
     "jquery-easing": "^0.0.1",
     "markdown-js": "^0.0.4",
     "marked": "^0.3.19",
+    "simple-line-icons": "^2.4.1",
     "to-markdown": "^3.1.1"
   }
 }
