@@ -1242,3 +1242,640 @@ Completed 200 OK in 629ms (Views: 615.9ms | ActiveRecord: 0.3ms)
 === puma shutdown: 2018-04-13 10:15:30 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-13 10:16:18 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 10:16:31 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 10:41:43 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-13 10:42:04 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (587.1ms)
+Completed 500 Internal Server Error in 610ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( simple-line-icons/css/simple-line-icons.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"%>
+    5:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Muli"%>
+    6: 
+    7:     <%= stylesheet_link_tag 'simple-line-icons/css/simple-line-icons', 'data-turbolinks-track' => true %>
+    8:     <%= stylesheet_link_tag 'html5-device-mockups/dist/device-mockups.min', 'data-turbolinks-track' => true %>
+    9: <% end %>
+   10: 
+  
+app/views/welcome/index.html.erb:7:in `block in _app_views_welcome_index_html_erb___1499090709085700291_70193063231040'
+app/views/welcome/index.html.erb:1:in `_app_views_welcome_index_html_erb___1499090709085700291_70193063231040'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 10:52:46 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 10:52:50 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-13 10:53:02 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (3.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+Started GET "/" for 127.0.0.1 at 2018-04-13 10:53:04 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+Started GET "/" for 127.0.0.1 at 2018-04-13 10:53:06 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (4521.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (24.2ms)
+Completed 200 OK in 4760ms (Views: 4743.0ms | ActiveRecord: 4.9ms)
+
+
+  Rendered welcome/index.html.erb within layouts/application (1626.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 1728ms (Views: 1726.1ms | ActiveRecord: 0.5ms)
+
+
+  Rendered welcome/index.html.erb within layouts/application (2960.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (2.3ms)
+Completed 200 OK in 3019ms (Views: 3017.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-04-13 10:53:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/Simple-Line-Icons.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/Simple-Line-Icons.ttf?v=2.4.0" for 127.0.0.1 at 2018-04-13 10:53:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/Simple-Line-Icons.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/Simple-Line-Icons.woff?v=2.4.0" for 127.0.0.1 at 2018-04-13 10:53:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/Simple-Line-Icons.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 10:53:12 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (1.1ms)
+  Rendered activities/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-13 10:53:17 +0800
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (5.4ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 75ms (Views: 55.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/activities/reject_inform.png" for 127.0.0.1 at 2018-04-13 10:58:57 +0800
+Processing by ActivitiesController#show as PNG
+  Parameters: {"id"=>"reject_inform"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Activity with 'id'=reject_inform):
+  
+app/controllers/activities_controller.rb:39:in `show'
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 10:59:01 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkno+sSsqrD5/a5TzwqUF3ehG+PXe+fVn/Jq5BOkX+/UWZRLsMZ9157MkCYNbgJ3rDmYXKgGiE7OA1XZrGABfQ==", "activity"=>{"name"=>"这是个简单的测试", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007ffc8d06e690 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-87237-1j84asd.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (2.6ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 11:00:21 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oOsrKQbFaCSqKfOrMQrzauzVcFqrFTlEP2VnevbDiLtB1V2gJixmiUT9PjnvjgMhIsxEyXkwMiXd4tuJO1Nu/w==", "activity"=>{"name"=>"这是个简单的测试", "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "start_time", "end_time", "rule", "information", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "这是个简单的测试"], ["start_time", "2018-04-13"], ["end_time", "2018-04-13"], ["rule", "无"], ["information", "# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"], ["created_at", "2018-04-13 03:00:21.241376"], ["updated_at", "2018-04-13 03:00:21.241376"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/activities/1
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/activities/1" for 127.0.0.1 at 2018-04-13 11:00:21 +0800
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    3:     <div class="col-lg-12">
+    4:       <!--cover header-->
+    5:       <div class="page-header">
+    6:         <%= image_tag(@activity.cover.url , width:"100%") %> 
+    7:       </div>  
+    8:       <!-- information panel-->
+    9:       <div class="activity-content">
+  
+app/views/activities/show.html.erb:6:in `_app_views_activities_show_html_erb__177764751407635181_70361322232500'
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 11:10:46 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (12.0ms)
+  Rendered activities/index.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    2:   <% for activity in activities %>
+    3:     <tr id="<%= "activity_#{activity.id}" %>">
+    4:       <td class="col-sm-3">
+    5:         <%= image_tag(activity.cover.thumb.url) %>
+    6:       </td>
+    7:       <td class="col-sm-8">
+    8:         <div class="name">
+  
+app/views/shared/_activity_list.html.erb:5:in `block in _app_views_shared__activity_list_html_erb__4510985707675832231_70361328547760'
+app/views/shared/_activity_list.html.erb:2:in `_app_views_shared__activity_list_html_erb__4510985707675832231_70361328547760'
+app/views/activities/index.html.erb:16:in `_app_views_activities_index_html_erb__3064103161913470320_70361354079540'
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 11:10:49 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nu9lHu+Wl4q8epSQZQnVVls7AmB/WvYCDrfYuPV4z61/0ROXz3+ZJ1KuWQK7jSUdlSI2861//WPsMGRLOOgp6Q==", "activity"=>{"name"=>"这是个简单的测试", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007ffc8af314a0 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-87237-11d5s2m.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[20, 29] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   20: 
+   21:     def create
+   22:         @activity = Activity.new(activity_params)
+   23:         byebug
+   24:         
+=> 25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+   28:                 wants.html { redirect_to(@activity) }
+   29:                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
+(byebug)   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+- Gracefully stopping, waiting for requests to finish
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 35537ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+=== puma shutdown: 2018-04-13 11:11:25 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 11:12:18 +0800 ===
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 11:12:29 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MwLiBljsLZAAUCIDcBANAinEbqStFbuE4I+pXsDDJUHSPJSPeAUjPe6E75GulP1J591aN38wsOUCCBWtDVPDBQ==", "activity"=>{"name"=>"这是个简单的测试", "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[20, 29] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   20: 
+   21:     def create
+   22:         @activity = Activity.new(activity_params)
+   23:         byebug
+   24:         
+=> 25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+   28:                 wants.html { redirect_to(@activity) }
+   29:                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
+(byebug) [K(byebug)   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+- Gracefully stopping, waiting for requests to finish
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "start_time", "end_time", "rule", "information", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "这是个简单的测试"], ["start_time", "2018-04-13"], ["end_time", "2018-04-13"], ["rule", "无"], ["information", "# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"], ["created_at", "2018-04-13 03:43:24.031512"], ["updated_at", "2018-04-13 03:43:24.031512"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/activities/2
+Completed 302 Found in 1854419ms (ActiveRecord: 2.6ms)
+
+
+=== puma shutdown: 2018-04-13 11:43:24 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 11:43:30 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 11:43:34 +0800 ===
+- Goodbye!
+=== puma startup: 2018-04-13 11:44:13 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 11:44:17 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 13:41:02 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 13:41:11 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 13:41:21 +0800 ===
+Started GET "/activities/2" for 127.0.0.1 at 2018-04-13 13:41:42 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActivity Load (1.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    3:     <div class="col-lg-12">
+    4:       <!--cover header-->
+    5:       <div class="page-header">
+    6:         <%= image_tag(@activity.cover.url , width:"100%") %> 
+    7:       </div>  
+    8:       <!-- information panel-->
+    9:       <div class="activity-content">
+  
+app/views/activities/show.html.erb:6:in `_app_views_activities_show_html_erb__2487247589885225894_70196272644220'
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 13:41:46 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (2.9ms)
+  Rendered activities/index.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    2:   <% for activity in activities %>
+    3:     <tr id="<%= "activity_#{activity.id}" %>">
+    4:       <td class="col-sm-3">
+    5:         <%= image_tag(activity.cover.thumb.url) %>
+    6:       </td>
+    7:       <td class="col-sm-8">
+    8:         <div class="name">
+  
+app/views/shared/_activity_list.html.erb:5:in `block in _app_views_shared__activity_list_html_erb__2262818833584843178_70196282206900'
+app/views/shared/_activity_list.html.erb:2:in `_app_views_shared__activity_list_html_erb__2262818833584843178_70196282206900'
+app/views/activities/index.html.erb:16:in `_app_views_activities_index_html_erb__4269545485508046086_70196281890420'
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 13:41:49 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nu9lHu+Wl4q8epSQZQnVVls7AmB/WvYCDrfYuPV4z61/0ROXz3+ZJ1KuWQK7jSUdlSI2861//WPsMGRLOOgp6Q==", "activity"=>{"name"=>"这是个简单的测试", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fafaff31298 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-90840-1olfz6x.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[20, 29] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   20: 
+   21:     def create
+   22:         @activity = Activity.new(activity_params)
+   23:         byebug
+   24:         
+=> 25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+   28:                 wants.html { redirect_to(@activity) }
+   29:                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
+(byebug)   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+- Gracefully stopping, waiting for requests to finish
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 124073ms (Views: 511.8ms | ActiveRecord: 0.3ms)
+
+
+=== puma shutdown: 2018-04-13 13:43:53 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 13:44:03 +0800 ===
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 13:44:31 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RKk1Sosb4AdXSxLqzQwBal/jPBh40zN87w2z2emvAwKll0PDq/Luqrmf33gTiPEhkfoIi6r2OB0Nig8qJD/lRg==", "activity"=>{"name"=>"这是个简单的测试", "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[20, 29] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   20: 
+   21:     def create
+   22:         @activity = Activity.new(activity_params)
+   23:         byebug
+   24:         
+=> 25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+   28:                 wants.html { redirect_to(@activity) }
+   29:                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
+(byebug)   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "start_time", "end_time", "rule", "information", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "这是个简单的测试"], ["start_time", "2018-04-13"], ["end_time", "2018-04-13"], ["rule", "无"], ["information", "# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"], ["created_at", "2018-04-13 05:44:36.832039"], ["updated_at", "2018-04-13 05:44:36.832039"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:9090/activities/3
+Completed 302 Found in 5273ms (ActiveRecord: 6.9ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+Started GET "/activities/3" for 127.0.0.1 at 2018-04-13 13:44:36 +0800
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering activities/show.html.erb within layouts/application
+  Rendered activities/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    3:     <div class="col-lg-12">
+    4:       <!--cover header-->
+    5:       <div class="page-header">
+    6:         <%= image_tag(@activity.cover.url , width:"100%") %> 
+    7:       </div>  
+    8:       <!-- information panel-->
+    9:       <div class="activity-content">
+  
+app/views/activities/show.html.erb:6:in `_app_views_activities_show_html_erb__2644438021177686960_70112473082620'
+=== puma shutdown: 2018-04-13 13:44:37 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 13:49:16 +0800 ===
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 13:49:27 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (13.8ms)
+  Rendered activities/index.html.erb within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    2:   <% for activity in activities %>
+    3:     <tr id="<%= "activity_#{activity.id}" %>">
+    4:       <td class="col-sm-3">
+    5:         <%= image_tag(activity.cover.thumb.url) %>
+    6:       </td>
+    7:       <td class="col-sm-8">
+    8:         <div class="name">
+  
+app/views/shared/_activity_list.html.erb:5:in `block in _app_views_shared__activity_list_html_erb___2505112466547529533_70309468119600'
+app/views/shared/_activity_list.html.erb:2:in `_app_views_shared__activity_list_html_erb___2505112466547529533_70309468119600'
+app/views/activities/index.html.erb:16:in `_app_views_activities_index_html_erb__4278818436643705173_70309459949400'
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 13:49:30 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nu9lHu+Wl4q8epSQZQnVVls7AmB/WvYCDrfYuPV4z61/0ROXz3+ZJ1KuWQK7jSUdlSI2861//WPsMGRLOOgp6Q==", "activity"=>{"name"=>"这是个简单的测试", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fe46a86e4e8 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-91140-1ohioyx.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[20, 29] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   20: 
+   21:     def create
+   22:         @activity = Activity.new(activity_params)
+   23:         byebug
+   24:         
+=> 25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+   28:                 wants.html { redirect_to(@activity) }
+   29:                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
+(byebug)   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+- Gracefully stopping, waiting for requests to finish
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 172314ms (Views: 529.0ms | ActiveRecord: 0.3ms)
+
+
+=== puma shutdown: 2018-04-13 13:52:23 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 13:52:28 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 14:06:01 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 14:09:50 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 14:20:03 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 14:20:07 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-13 14:20:27 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 14:20:37 +0800 ===
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 14:20:39 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (12.6ms)
+  Rendered activities/index.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    2:   <% for activity in activities %>
+    3:     <tr id="<%= "activity_#{activity.id}" %>">
+    4:       <td class="col-sm-3">
+    5:         <%= image_tag(activity.cover.thumb.url) %>
+    6:       </td>
+    7:       <td class="col-sm-8">
+    8:         <div class="name">
+  
+app/views/shared/_activity_list.html.erb:5:in `block in _app_views_shared__activity_list_html_erb___1124899797740459263_70164294432680'
+app/views/shared/_activity_list.html.erb:2:in `_app_views_shared__activity_list_html_erb___1124899797740459263_70164294432680'
+app/views/activities/index.html.erb:16:in `_app_views_activities_index_html_erb__2048332611794148183_70164343541120'
+Started GET "/activities" for 127.0.0.1 at 2018-04-13 14:20:44 +0800
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered shared/_activity_list.html.erb (3.6ms)
+  Rendered activities/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    2:   <% for activity in activities %>
+    3:     <tr id="<%= "activity_#{activity.id}" %>">
+    4:       <td class="col-sm-3">
+    5:         <%= image_tag(activity.cover.thumb.url) %>
+    6:       </td>
+    7:       <td class="col-sm-8">
+    8:         <div class="name">
+  
+app/views/shared/_activity_list.html.erb:5:in `block in _app_views_shared__activity_list_html_erb___1124899797740459263_70164286086400'
+app/views/shared/_activity_list.html.erb:2:in `_app_views_shared__activity_list_html_erb___1124899797740459263_70164286086400'
+app/views/activities/index.html.erb:16:in `_app_views_activities_index_html_erb__2048332611794148183_70164290341980'
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 14:20:49 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nu9lHu+Wl4q8epSQZQnVVls7AmB/WvYCDrfYuPV4z61/0ROXz3+ZJ1KuWQK7jSUdlSI2861//WPsMGRLOOgp6Q==", "activity"=>{"name"=>"这是个简单的测试", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fa0cb745068 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-92070-slpw1s.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 13th 2018, 10:54", "end_time"=>"April 13th 2018, 10:54", "rule"=>"无", "information"=>"# Codeobscure\r\n\r\nWelcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codeobscure`. To experiment with that code, run `bin/console` for an interactive prompt.\r\n\r\nTODO: Delete this and the text above, and describe your gem\r\n\r\n## Installation\r\n\r\nAdd this line to your application's Gemfile:\r\n\r\ninstall it yourself as:\r\n\r\n    $ gem install codeobscure\r\n\r\n## Usage\r\n#### 版本说明\r\n* v0.1.2添加`-i`选项，执行这个选项会创建一个`ignoresymbols`文件，在这个文件中填写你要忽略的方法、属性或类名(英文逗号分割)。它仅仅作用于你的这个项目，和`-l`不一样，它不会被记录下来。假设你在`-l`过滤某些名称后，项目中仍然有某些名称冲突了，这个选项更方便你使用它，把冲突名称写入`ignoresymbols`，然后运行`-o`重新生成混淆文件。\r\n* v0.1.3 优化`-l`和`-o`的性能，提高运行速度\r\n* v0.1.4 放宽`ignoresymbols`的格式限制，字段之间以逗号分割即可，你可以为了可读性在字段之间添加空格换行等空白字符。例如\r\n\r\n\t\tv0.1.4之前必须如下，否则会过滤识别有问题：\r\n\t\t\t\tname,age,sex,nick\r\n\t\tv0.1.4版本:\r\n\t\t\t\tname, age ,sex,  nick \r\n\t\t\t   以及：\r\n\t\t\t   name,\r\n\t\t\t   age,\r\n\t\t\t   sex,\r\n\t\t\t   nick\r\n\t\t\t   \r\n\t\t这些方式都是可以的\r\n* v0.1.5 添加`NSClassFromString`以及`setValue:forKeyPath:`等字段过滤，进一步优化运行出现不识别方法崩溃的情况。添加替换方式[-t]，包括：随机字符 ， 随机单词，自定义替换(<font color=orange>目前自定义替换暂未实现，将在0.1.6中实现</font>)\r\n\t\r\n\t\t生成结果示例：\t\r\n\t\tr ：#define getHeight ZbgTCtOTDmEazebk\r\n\t\tw ：#define getHeight nodulatedBasutoland\r\n\t\tc ：等待实现\r\n注意：由于苹果反馈了如下的被拒信息,因为目前可以用w选项,之后会提供更有意义的单词的替换选项[c]：\r\n![被拒信息](./reject_inform.png)\r\n\t\r\n\r\n#### `codeobscure -h` for command help. \r\n\r\n\r\n\tUsage: obscure code for object-c project\r\n    -o, --obscure XcodeprojPath      obscure code\r\n    -l, --load path1,path2,path3     load filt symbols from path\r\n    -r, --reset                      reset loaded symbols\r\n    -f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n    -i, --ignore XcodeprojPath       create a ignore file, you can write your filt symbols in it.eg:name,age ...\r\n\r\n\r\n-o [project file path], obscure for the project.    \r\n-l [path],load filt symbol path. if you don't want obscure code for some direcotry. you can use this option.    \r\n-r reset loaded filt symbols.\r\n-f, --fetch type1,type2,type3    fetch and replace type,default type is [c,p,f].c for class,p for property,f for function\r\n\r\n#### 使用及原理说明\r\ncodeobscure主要用于oc（目前来说由于swift的特性摆在那里，这种方式不适用于swift）的项目，利用[iOS安全攻防（二十三）：Objective-C代码混淆](http://blog.csdn.net/yiyaaixuexi/article/details/29201699)的方式去进行代码混淆,纯粹的娱乐自己恶心他人。\t\t\r\n\r\n此工具会默认遍历项目属性，方法和类名进行混淆。当然如果简单的进行遍历的话，会产生无穷无尽的错误，因为你不可能混淆苹果提供给你的官方API，也不能混淆framework和.a的静态编译的库。所以在混淆代码的时候必须排除掉它们。我已经帮你过滤了系统的方法。如果你的项目中使用Pod或者使用了静态库，或者其他比较特别的第三方库，请使用`codeobscure -l [路径1,路径2..]`的方式去过滤这些库文件。运行`codeobscure -o [项目名.xcodepro]`去调用混淆你的代码，然后耐心等待一会就可以了。\r\n\t\t\r\n当然并不意味这你运行了就一定没错误，该工具最大的简化了混淆代码的工作，由于不同的人编写的代码可能各不相同。假设你调用了`NSClassFromString(\"classNameA\")`而这个类正好被混淆了，它不识别classNameA到底是什么。那么怎么解决这个错误呢。最简单的方式就是在`codeObfuscation.h`中查询classNameA并删除它的#define即可。\t\t\r\n\r\n在0.1.3中，你并不要简单的删掉它，而是先运行`codeobscure -i XcodeprojPath`去生成`ignoresymbols`。然后把需要进一步过滤的某些名字直接添加进入，用英文逗号分隔开来。例如上面你要删除的，如果你仅仅是删除了，下次要执行`codeobscure -o`重新生成的时候会又重新生成，你要再次把它从`codeObfuscation.h`中查询出来并删除。v0.1.3中你仅仅添加到`ignoresymbols`就可以很方便的解决这一问题。下次`codeobscure -o`生成的时候回自动过滤到这些字段。\r\n\r\n我测试的项目是有打几年历史的一个项目，代码也挺多的。合理的过滤掉某些不应该混淆的方法。提示错误的仅仅只有一个地方,然后就是运行的时候有几处崩溃，都是因为方法被混淆了，不识别方法导致的，仅仅删除它就可以了。运行完成后，除了解决错误，你不需要进行额外的文件添加删除操作，我已帮你添加好了。你觉得代码混淆不好用，那么直接删除codeObfuscation.h就行了。此致，敬礼！\t\r\n\r\n\r\n注意：如果你运行了`codeobscure -l [路径1,路径2..]`,那么它会记录下来要过滤的东西。如果你下次不想过滤已经过滤的库，运行`codeobscure -r`来重置。\r\n\r\n如果有什么不好用的地方，直接写到issue，我会尽量让它更好用。\r\n\r\n`-l`可以接多路劲，用逗号分割，如下：\t\t\r\nExample :\r\n\r\n\tcodeobscure -o /Users/mac/Downloads/Examples/Messenger.xcodeproj  -l /Users/mac/Downloads/Examples/Pods,/Users/mac/Downloads/Examples/Download\r\n\r\n*注意:*  由于苹果新版系统有[SIP(系统完整性保护)](https://support.apple.com/zh-cn/HT204899)默认是开启的，所以由于安装方式不同，可能在运行命令的时候出现:`attempt to write a readonly database (SQLite3::ReadOnlyException)`的问题。如果出现这个问题，请在命令行上加上`sudo`。\r\n\r\n\r\n## Contributing\r\n\r\nBug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codeobscure. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.\r\n\r\n\r\n## License\r\n\r\nThe gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\r\n"}, "commit"=>"Submit"}
+
+[18, 27] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   18:         @activity = Activity.new
+   19:     end
+   20: 
+   21:     def create
+   22:         byebug
+=> 23:         @activity = Activity.new(activity_params)
+   24:         
+   25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+(byebug) von[K[Kcontinue
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-13 14:21:28 +0800
+nil
+(byebug) Processing by ActivitiesController#new as HTML
+- Gracefully stopping, waiting for requests to finish
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (6.9ms)
+Completed 200 OK in 2791846ms (Views: 519.9ms | ActiveRecord: 3.7ms)
+
+
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 599ms (Views: 60.5ms | ActiveRecord: 0.4ms)
+
+
+=== puma shutdown: 2018-04-13 15:07:21 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-13 15:07:28 +0800 ===
+Started GET "/activities/new" for 127.0.0.1 at 2018-04-13 15:07:43 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (12.9ms)
+  Rendered shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 496ms (Views: 457.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2018-04-13 15:07:56 +0800
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yzuR6iO8bHrm/OMbo7GkGFFK0kOqjrn6MtWNvYMzwasqBedjA1Vi1wgoLol9NVRTn1Pm0HirspvQUjFOTqMn7w==", "activity"=>{"name"=>"11", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fb96518bca0 @tempfile=#<Tempfile:/var/folders/98/p8psr4r55kx2wqzkdz185bq40000gn/T/RackMultipart20180413-93443-8jfvdm.jpg>, @original_filename="grass.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"activity[cover]\"; filename=\"grass.jpg\"\r\nContent-Type: image/jpeg\r\n">, "start_time"=>"April 11th 2018, 12:00", "end_time"=>"April 11th 2018, 12:00", "rule"=>"11", "information"=>"1111"}, "commit"=>"Submit"}
+
+[18, 27] in /Users/mk/Documents/GZFun/app/controllers/activities_controller.rb
+   18:         @activity = Activity.new
+   19:     end
+   20: 
+   21:     def create
+   22:         byebug
+=> 23:         @activity = Activity.new(activity_params)
+   24:         
+   25:         respond_to do |wants|
+   26:             if @activity.save
+   27:                 flash[:success] = 'Activity was successfully created.'
+(byebug) - Gracefully stopping, waiting for requests to finish
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering activities/new.html.erb within layouts/application
+  Rendered activities/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 27301ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+=== puma shutdown: 2018-04-13 15:08:23 +0800 ===
+- Goodbye!
+Exiting

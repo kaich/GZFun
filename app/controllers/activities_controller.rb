@@ -19,6 +19,7 @@ class ActivitiesController < ApplicationController
     end
 
     def create
+        byebug
         @activity = Activity.new(activity_params)
         
         respond_to do |wants|
