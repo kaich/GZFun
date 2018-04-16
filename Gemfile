@@ -56,7 +56,7 @@ gem 'devise'
 
 #avatar 
 gem 'carrierwave'
-gem 'mini_magick'
+gem "mini_magick"
 
 # comment
 gem 'acts_as_commentable'

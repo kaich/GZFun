@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         mount_uploader :avatar, UserAvatarUploader
-         acts_as_voter
+  mount_uploader :avatar, UserAvatarUploader
+  acts_as_voter
 end

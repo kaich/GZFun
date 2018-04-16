@@ -19,7 +19,6 @@ class ActivitiesController < ApplicationController
     end
 
     def create
-        byebug
         @activity = Activity.new(activity_params)
         
         respond_to do |wants|
@@ -28,6 +27,7 @@ class ActivitiesController < ApplicationController
                 wants.html { redirect_to(@activity) }
                 wants.xml { render :xml => @activity, :status => :created, :location => @activity }
             else
+                byebug
                 flash[:danger] = 'Activity was failed created.'
                 wants.html { render :action => "new" }
                 wants.xml { render :xml => @activity.errors, :status => :unprocessable_entity }
