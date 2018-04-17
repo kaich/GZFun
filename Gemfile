@@ -44,6 +44,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 #font awesome
 gem 'font-awesome-sass'
 
+gem 'simple-line-icons-rails'
+
 #will paginate
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'

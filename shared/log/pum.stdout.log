@@ -3,3 +3,13 @@
 === puma shutdown: 2018-04-16 16:50:30 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-17 10:40:09 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-17 10:42:46 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-17 10:43:10 +0800 ===
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-17 10:43:12 +0800 ===
+- Goodbye!
+Exiting
