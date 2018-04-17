@@ -17,15 +17,15 @@ environment rails_env
 
 #注释这些做调试，byedebug才会有显示
 # Set up socket location
-# bind "unix://#{shared_dir}/sockets/puma.sock"
+bind "unix://#{shared_dir}/sockets/puma.sock"
 
 # Logging
-# stdout_redirect "#{shared_dir}/log/pum.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
+stdout_redirect "#{shared_dir}/log/pum.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
 
 # Set master PID and state locations
-# pidfile "#{shared_dir}/pids/puma.pid"
-# state_path "#{shared_dir}/pids/puma.state"
-# activate_control_app
+pidfile "#{shared_dir}/pids/puma.pid"
+state_path "#{shared_dir}/pids/puma.state"
+activate_control_app
 
 on_worker_boot do
   require "active_record"
