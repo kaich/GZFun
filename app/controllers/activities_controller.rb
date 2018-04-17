@@ -19,7 +19,7 @@ class ActivitiesController < ApplicationController
     end
 
     def create
-        @activity = Activity.new(activity_params)
+        @activity = current_user.activities.build(activity_params)
         
         respond_to do |wants|
             if @activity.save

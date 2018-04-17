@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20180410013529) do
 
   create_table "activities", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.date "start_time"
     t.date "end_time"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180410013529) do
     t.index ["cached_weighted_average"], name: "index_activities_on_cached_weighted_average"
     t.index ["cached_weighted_score"], name: "index_activities_on_cached_weighted_score"
     t.index ["cached_weighted_total"], name: "index_activities_on_cached_weighted_total"
+    t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|

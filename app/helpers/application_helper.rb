@@ -12,6 +12,13 @@ module ApplicationHelper
     alert_type
   end
 
+  def owned(item)
+    if user_signed_in? 
+      return current_user.id == item.user_id
+    end
+    return false
+  end
+
   def admin
     User.find_by(admin: true)
   end
