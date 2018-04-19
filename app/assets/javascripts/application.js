@@ -14,11 +14,12 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require moment
-//= require jquery-easing/dist/jquery.easing.1.3.umd.min
+//= require jquery-easing
 //= require bootstrap-datetimepicker
-//= require bootstrap-markdown/js/bootstrap-markdown
-//= require markdown-js/lib/markdown
-//= require marked/marked.min
-//= require to-markdown/dist/to-markdown
+//= require bootstrap-markdown
+//= require markdown-js/dist/markdown.js
+//= require marked
+//= require to-markdown
 //= require turbolinks
 //= require_tree .
+
