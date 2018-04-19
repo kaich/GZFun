@@ -4,6 +4,9 @@
     "bootstrap-markdown": "latest",
     "markdown-js": "latest",
     "marked": "latest",
-    "to-markdown": "latest"
+    "to-markdown": "1.3.0",
+    "html5-device-mockups": "latest",
+    "jquery-easing": "latest",
+    "simple-line-icons": "latest"
   }
 }

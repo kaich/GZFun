@@ -3,8 +3,11 @@
 
 # asset 'bootstrap'
 
-
 asset 'bootstrap-markdown'
 asset 'markdown-js'
 asset 'marked'
-asset 'to-markdown'
+asset 'to-markdown', '1.3.0'
+
+asset "html5-device-mockups"
+asset "jquery-easing"
+asset "simple-line-icons"

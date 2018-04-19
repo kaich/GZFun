@@ -49,3 +49,211 @@ Completed 200 OK in 498ms (Views: 485.9ms | ActiveRecord: 1.0ms)
 === puma shutdown: 2018-04-17 16:43:37 +0800 ===
 - Goodbye!
 Exiting
+=== puma startup: 2018-04-19 11:10:26 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-19 11:10:39 +0800
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-19 11:10:53 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-19 11:11:04 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-19 11:11:17 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (223.5ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery-easing' with type 'application/javascript'
+Checked in these paths: 
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/config
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/images
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/stylesheets
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/momentjs-rails-2.20.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/actionview-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /Users/mk/Documents/GZFun_Push/GZFun/node_modules
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/fonts):
+    57:                         <div class="device" data-device="iPhone6Plus" data-orientation="portrait" data-color="white">
+    58:                             <div class="screen">
+    59:                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+    60:                                 <%= image_tag  "demo-screen-1.jpg" , class: "img-responsive", alt: "" %>
+    61:                             </div>
+    62:                             <div class="button">
+    63:                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+  
+app/assets/javascripts/application.js:17
+app/views/welcome/index.html.erb:60:in `_app_views_welcome_index_html_erb__1680993852642168191_70126499230400'
+Started GET "/" for 127.0.0.1 at 2018-04-19 11:11:27 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery-easing' with type 'application/javascript'
+Checked in these paths: 
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/config
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/images
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/stylesheets
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/momentjs-rails-2.20.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/actionview-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /Users/mk/Documents/GZFun_Push/GZFun/node_modules
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/fonts):
+    57:                         <div class="device" data-device="iPhone6Plus" data-orientation="portrait" data-color="white">
+    58:                             <div class="screen">
+    59:                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+    60:                                 <%= image_tag  "demo-screen-1.jpg" , class: "img-responsive", alt: "" %>
+    61:                             </div>
+    62:                             <div class="button">
+    63:                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+  
+app/assets/javascripts/application.js:17
+app/views/welcome/index.html.erb:60:in `_app_views_welcome_index_html_erb__1680993852642168191_70126528777400'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-19 11:14:23 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-19 11:14:42 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-19 11:14:48 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (201.3ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'to-markdown' with type 'application/javascript'
+Checked in these paths: 
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/config
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/images
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/app/assets/stylesheets
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/simple-line-icons-rails-0.1.3/app/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap3-datetimepicker-rails-4.17.47/vendor/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/momentjs-rails-2.20.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/actionview-5.1.6/lib/assets/compiled
+  /usr/local/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/mk/Documents/GZFun_Push/GZFun/vendor/assets/bower_components
+  /Users/mk/Documents/GZFun_Push/GZFun/node_modules
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /usr/local/lib/ruby/gems/2.5.0/gems/bootstrap-sass-3.3.7/assets/images
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/stylesheets
+  /usr/local/lib/ruby/gems/2.5.0/gems/font-awesome-sass-5.0.9/assets/fonts):
+    57:                         <div class="device" data-device="iPhone6Plus" data-orientation="portrait" data-color="white">
+    58:                             <div class="screen">
+    59:                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+    60:                                 <%= image_tag  "demo-screen-1.jpg" , class: "img-responsive", alt: "" %>
+    61:                             </div>
+    62:                             <div class="button">
+    63:                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+  
+app/assets/javascripts/application.js:22
+app/views/welcome/index.html.erb:60:in `_app_views_welcome_index_html_erb__3321953436718374643_70125770491220'
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-19 11:16:37 +0800 ===
+- Goodbye!
+Exiting
+=== puma startup: 2018-04-19 11:16:47 +0800 ===
+Started GET "/" for 127.0.0.1 at 2018-04-19 11:17:02 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."cached_weighted_total" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  Rendered welcome/index.html.erb within layouts/application (4361.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navigation.html.erb (15.6ms)
+Completed 200 OK in 4536ms (Views: 4524.0ms | ActiveRecord: 0.9ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-04-19 11:17:17 +0800 ===
+- Goodbye!
+Exiting
